@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-input
+      type="email"
+      [(ngModel)]="correo"
+      placeholder="Correo electrónico">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea
+      [(ngModel)]="mensaje"
+      placeholder="Escribe tu mensaje"
+      rows="5">
+    </ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" (click)="enviar()">
+    Enviar
+  </ion-button>
+
+  @if (enviado()) {
+    <p>Mensaje guardado correctamente.</p>
+  }
+
+</ion-content>
